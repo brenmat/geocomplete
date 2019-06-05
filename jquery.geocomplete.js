@@ -193,6 +193,10 @@
       this.autocomplete = new google.maps.places.Autocomplete(
         this.input, options
       );
+      // Reference: https://developers.google.com/places/web-service/details#fields
+      this.autocomplete.setFields(['address_component','adr_address','alt_id','formatted_address',
+      'geometry','icon','id','name','permanently_closed',
+      'photo','place_id','plus_code','scope','type','vicinity']);
 
       this.geocoder = new google.maps.Geocoder();
 
